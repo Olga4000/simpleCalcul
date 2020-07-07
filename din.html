@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>dinamica</title>
+	<style>
+		div#color{
+			background: pink;
+			width: 100px;
+			height: 100px;
+			margin-top: 100px;
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+
+	<h2>Калькулятор</h2>
+
+<p>x <sup>2</sup> + y <sup>2</sup> = <span id="res"></span></p>
+	<form>
+		<input type="number" id="x" placeholder="введите x" oninput="cal()">
+		<input type="number" id="y" placeholder="введите y" oninput="cal()">
+			
+	</form>
+
+	
+	<script>
+		function cal(){
+			var x = document.getElementById("x");
+			x = x.value;
+			var y = document.getElementById("y");
+			y = y.value;
+			var xy = x**2 + y**2;
+			var res = document.getElementById("res");
+			res.innerHTML = xy;
+			}
+</script>
+</body>
+</html>
